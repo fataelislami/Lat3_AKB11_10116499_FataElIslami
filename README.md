@@ -7,8 +7,8 @@ Hello! I created My Self Apps to make people know me easily
 
 ## Overview
 
-![SplashScreen](https://kostlab.id/ss/myselfapps/Screenshot_1557045177.png)
-![Home](https://kostlab.id/ss/myselfapps/Screenshot_1557045192.pngg)
+![OverView1](https://kostlab.id/ss/myselfapps/1.png)
+![OverView2](https://kostlab.id/ss/myselfapps/2.png)
 
 
 ## Built With
