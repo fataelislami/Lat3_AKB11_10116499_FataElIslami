@@ -15,7 +15,8 @@ import butterknife.ButterKnife;
  * Nim : 10116499
  * Nama : Fata El Islami
  * Kelas : AKB-11
- * Latiha 3 UTS
+ * Latihan 3 UTS
+ * Tanggal : 30 April 2019
  */
 public class DailyActivityViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.txtDailyTitle)
