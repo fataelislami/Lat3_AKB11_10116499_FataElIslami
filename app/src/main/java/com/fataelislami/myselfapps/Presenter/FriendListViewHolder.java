@@ -3,6 +3,7 @@ package com.fataelislami.myselfapps.Presenter;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fataelislami.myselfapps.R;
@@ -16,6 +17,8 @@ public class FriendListViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.txtFriendListName)
     TextView txtFriendListName;
     @BindView(R.id.txtFriendListAge) TextView txtFriendListAge;
+    @BindView(R.id.imgFriendList)
+    ImageView imgFriendList;
     private ArrayList<String> friendListModel=new ArrayList<>();
 
     public FriendListViewHolder(@NonNull View itemView) {

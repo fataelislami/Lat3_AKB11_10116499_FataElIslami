@@ -108,14 +108,25 @@ public class DailyFragment extends Fragment {
 
     private void initDataFriend() {
         friendListModelList =new ArrayList<>();
-        friendListModelList.add(new FriendListModel("Mamun SW","19"));
-        friendListModelList.add(new FriendListModel("Imam DC","22"));
+        friendListModelList.add(new FriendListModel("Mamun SW","19 Tahun", R.drawable.mamun));
+        friendListModelList.add(new FriendListModel("Imam DC","22 Tahun", R.drawable.imam));
+        friendListModelList.add(new FriendListModel("Reza IF","13 Tahun", R.drawable.reza));
     }
 
     private void initDataDaily() {
         dailyActivityModelList = new ArrayList<>();
-        dailyActivityModelList.add(new DailyActivityModel("Sholat Shubuh","5 Waktu"));
-        dailyActivityModelList.add(new DailyActivityModel("Makan Pagi","sama nasi kuning"));
+        dailyActivityModelList.add(new DailyActivityModel("Sholat Shubuh","InsyaAllah Dimesjid"));
+        dailyActivityModelList.add(new DailyActivityModel("Makan Pagi","beli nasi kuning"));
+        dailyActivityModelList.add(new DailyActivityModel("Mandi Pagi","Sabun,shampo dan gosok gigi"));
+        dailyActivityModelList.add(new DailyActivityModel("Kuliah","Mata Kuliah AKB Tercinta"));
+        dailyActivityModelList.add(new DailyActivityModel("Sholat Dzuhur","InsyaAllah Dimesjid"));
+        dailyActivityModelList.add(new DailyActivityModel("Istirahat","Jajan Jajan Ringan"));
+        dailyActivityModelList.add(new DailyActivityModel("Main Game","Sampe Shubuh :D"));
+
+
+
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

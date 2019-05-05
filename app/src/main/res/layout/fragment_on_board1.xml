@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgonboard"
+    tools:context=".Views.SubOnBoard.OnBoard1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/onboard1"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="Hello! I'm Fata El Islami Student From UNIKOM,I'll Take You On Tour!Welcome To My Self Application"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#FFFFFF"
+            />
+    </LinearLayout>
+
+</FrameLayout>

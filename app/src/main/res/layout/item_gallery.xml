@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardElevation="0dp"
+    android:layout_marginBottom="5dp"
+
     card_view:cardCornerRadius="4dp"
     card_view:cardUseCompatPadding="false">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="5dp"
+        android:layout_margin="2dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="5dp"
@@ -24,13 +26,15 @@
             />
         <TextView
             android:id="@+id/txtGalleryName"
-            android:layout_width="wrap_content"
-            android:layout_height="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:text="Ini Name"
             android:layout_gravity="center"
+            android:textAlignment="center"
             android:fontFamily="@font/nunito_bold"
-            android:textColor="#454F63"
-            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/card_1_gradient"
+            android:textSize="15dp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="12dp" />

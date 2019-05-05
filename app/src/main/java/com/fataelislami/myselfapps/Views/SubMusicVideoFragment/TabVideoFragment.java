@@ -9,10 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-import com.fataelislami.myselfapps.Models.MusicModel;
 import com.fataelislami.myselfapps.Models.VideoModel;
-import com.fataelislami.myselfapps.Presenter.MusicAdapter;
 import com.fataelislami.myselfapps.Presenter.VideoAdapter;
 import com.fataelislami.myselfapps.R;
 
@@ -82,6 +81,8 @@ public class TabVideoFragment extends Fragment {
         // Inflate the layout for this fragment
         View viewFragment=inflater.inflate(R.layout.fragment_tab_video, container, false);
         ButterKnife.bind(this,viewFragment);
+        Toast.makeText(getContext(),"Tap Untuk Play Musik & Video",Toast.LENGTH_LONG).show();
+
         //Proses RV
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         initData();
@@ -94,11 +95,11 @@ public class TabVideoFragment extends Fragment {
     }
 
     private void initData() {
+        String pathVideo = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.fatavideo;
         videoModelList=new ArrayList<>();
-        videoModelList.add(new VideoModel(1,"Unikom Happy","Gamma1","3.20"));
-        videoModelList.add(new VideoModel(2,"Unikom Sad","Gamma2","3.00"));
-        videoModelList.add(new VideoModel(3,"Unikom Angry","Gamma3","3.10"));
-        videoModelList.add(new VideoModel(4,"Unikom Boy","Gamma4","3.15"));
+        videoModelList.add(new VideoModel(1,"Trailer Unikom","Fata Halilintar","3.20", pathVideo));
+        videoModelList.add(new VideoModel(2,"Trailer Avengers","Marvel","3.00", pathVideo));
+        videoModelList.add(new VideoModel(3,"Trailer Justice League","DC","3.10", pathVideo));
     }
 
 

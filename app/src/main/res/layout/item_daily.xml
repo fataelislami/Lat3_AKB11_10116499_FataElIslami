@@ -5,38 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardElevation="0dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+
+    card_view:cardCornerRadius="10dp"
     card_view:cardUseCompatPadding="false">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="63dp"
+        android:layout_height="80dp"
+        android:background="@drawable/card_1_gradient"
+
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="7dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/star"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtDailyTitle"
             android:layout_width="wrap_content"
             android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
             android:text="Ini Title"
-            android:textColor="#454F63"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#FFFFFF"
             android:textSize="17dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="13dp"
-            tools:layout_editor_absoluteY="12dp" />
+            card_view:layout_constraintStart_toEndOf="@+id/imageView"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/txtDailyDescription"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
             android:text="Ini Desc"
+            android:textColor="#FFFFFF"
             android:textSize="13dp"
-            android:textColor="#959DAD"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="@+id/txtDailyTitle"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/txtDailyTitle"
             card_view:layout_constraintTop_toBottomOf="@+id/txtDailyTitle"
-            card_view:layout_constraintVertical_bias="0.050000012" />
+            card_view:layout_constraintVertical_bias="0.1" />
+
+
 
 
 

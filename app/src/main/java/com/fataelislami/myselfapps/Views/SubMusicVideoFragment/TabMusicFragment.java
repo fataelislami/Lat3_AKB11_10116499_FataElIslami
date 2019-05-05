@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fataelislami.myselfapps.Models.MusicModel;
-import com.fataelislami.myselfapps.Presenter.DailyActivityAdapter;
 import com.fataelislami.myselfapps.Presenter.MusicAdapter;
 import com.fataelislami.myselfapps.R;
 
@@ -93,11 +92,28 @@ public class TabMusicFragment extends Fragment {
     }
 
     private void initData() {
+        //data lagu dipotong beberapa agar tidak memberatkan apk
+        //namun untuk lagu full tetap 100% worked pak hehe :D
+        int musik1=R.raw.tompiramadhan;
+        int musik2=R.raw.ungulebaran;
+        int musik3=R.raw.seventeen;
+        int musik4=R.raw.hadadalwi;
+        int musik5=R.raw.waliabatasa;
+        int musik6=R.raw.maherzain;
+
         musicModelList=new ArrayList<>();
-        musicModelList.add(new MusicModel(1,R.drawable.musicvideo,"Jomblo Happy","Gamma1","3.20"));
-        musicModelList.add(new MusicModel(2,R.drawable.musicvideo,"Jomblo Sad","Gamma2","3.00"));
-        musicModelList.add(new MusicModel(3,R.drawable.musicvideo,"Jomblo Angry","Gamma3","3.10"));
-        musicModelList.add(new MusicModel(4,R.drawable.musicvideo,"Jomblo Boy","Gamma4","3.15"));
+        musicModelList.add(new MusicModel(1,R.drawable.tompi,"Ramadhan Datang","Tompi","3.20", musik1));
+        musicModelList.add(new MusicModel(2,R.drawable.ungu,"Selamat Lebaran","Ungu","3.00", musik2));
+        musicModelList.add(new MusicModel(3,R.drawable.seventeen,"Ramadhan Yang Indah","Seventeen","3.10", musik3));
+        musicModelList.add(new MusicModel(4,R.drawable.maherzain,"InsyaAllah","Maher Zain","3.15", musik6));
+        musicModelList.add(new MusicModel(5,R.drawable.wali,"Abatasa","Wali","2.98", musik5));
+        musicModelList.add(new MusicModel(6,R.drawable.hadadalwi,"Jalan Cinta","Hadad Alwi","3.60", musik4));
+        musicModelList.add(new MusicModel(7,R.drawable.opick,"Eta Terangkanlah","Opick","2.80", musik2));
+        musicModelList.add(new MusicModel(8,R.drawable.nisasabyan,"Hmmm","Nissa Sabyan","3.22", musik1));
+
+
+
+
 
     }
 

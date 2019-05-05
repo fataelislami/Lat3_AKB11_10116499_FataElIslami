@@ -31,6 +31,7 @@ public class FriendListAdapter extends RecyclerView.Adapter<FriendListViewHolder
         FriendListModel friendListModel=friendListModels.get(i);
         friendListViewHolder.txtFriendListName.setText(friendListModel.getName());
         friendListViewHolder.txtFriendListAge.setText(friendListModel.getAge());
+        friendListViewHolder.imgFriendList.setImageResource(friendListModel.getImage());
     }
 
     @Override

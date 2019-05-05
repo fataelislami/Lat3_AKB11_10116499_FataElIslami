@@ -5,12 +5,14 @@ public class VideoModel {
     private String title;
     private String artist;
     private String duration;
+    private String path;
 
-    public VideoModel(int id, String title, String artist, String duration) {
+    public VideoModel(int id, String title, String artist, String duration, String path) {
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.duration = duration;
+        this.path = path;
     }
 
     public int getId() {
@@ -43,5 +45,13 @@ public class VideoModel {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

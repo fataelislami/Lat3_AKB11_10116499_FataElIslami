@@ -1,11 +1,15 @@
 package com.fataelislami.myselfapps.Presenter;
 
 import android.content.Context;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.VideoView;
 
 import com.fataelislami.myselfapps.Models.MusicModel;
 import com.fataelislami.myselfapps.R;
@@ -16,6 +20,8 @@ import java.util.List;
 public class MusicAdapter extends RecyclerView.Adapter<MusicViewHolder> {
     private Context context;
     List<MusicModel> musicModelList;
+    private ArrayList<Integer> newMusic= new ArrayList<>();
+
 
     public MusicAdapter(Context context,List<MusicModel> musicModelList){
         this.context=context;
@@ -34,6 +40,13 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicViewHolder> {
         MusicModel musicModel=musicModelList.get(i);
         musicViewHolder.txtMusicTitle.setText(musicModel.getTitle());
         musicViewHolder.txtMusicArtist.setText(musicModel.getArtist());
+        musicViewHolder.txtMusicDuration.setText(musicModel.getDuration());
+        musicViewHolder.imgMusic.setImageResource(musicModel.getImage());
+
+        int uri=musicModel.getPath();
+        newMusic.add(uri);
+        musicViewHolder.setItem(newMusic);
+
     }
 
     @Override

@@ -5,13 +5,15 @@ public class MusicModel {
     private String title;
     private String artist;
     private String duration;
+    private int path;
 
-    public MusicModel(int id, int image, String title, String artist, String duration) {
+    public MusicModel(int id, int image, String title, String artist, String duration, int path) {
         this.id = id;
         this.image = image;
         this.title = title;
         this.artist = artist;
         this.duration = duration;
+        this.path = path;
     }
 
     public String getTitle() {
@@ -52,5 +54,13 @@ public class MusicModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getPath() {
+        return path;
+    }
+
+    public void setPath(int path) {
+        this.path = path;
     }
 }

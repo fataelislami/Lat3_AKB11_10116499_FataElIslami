@@ -1,32 +1,450 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+
     tools:context=".Views.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameHomeLayout"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/bghome"
+            android:scaleType="fitXY"
+            />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+
+
+
+            android:background="@drawable/card_2_gradient_round"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="MY SELF APPS"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absolutX="89dp"
+                tools:layout_editor_absolutY="34dp"
+                tools:layout_editor_absoluteY="12dp" />
+        </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imgProfileFata"
+                android:layout_width="112dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="85dp"
+                android:src="@drawable/fataelislami"
+                app:civ_border_color="#BA1CED"
+                app:civ_border_width="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/frameHomeLayout" />
+
+            <TextView
+                android:id="@+id/txtHomeNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fata El islami"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfileFata" />
+
+            <TextView
+            android:id="@+id/txtHomeBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Software Engineer"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHomeNama" />
+            <TextView
+                android:id="@+id/txtHomeDesc"
+                android:layout_width="320dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="More than a years experienced in software development, fluent with Java,C,PHP Also Familiar With Gits"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtHomeNama" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="#8E8E8E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.018" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="#8E8E8E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.231" />
+
+        <TextView
+            android:id="@+id/txtBloodGive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="75"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="15dp"
+            android:fontFamily="sans-serif"
+            android:text="PROJECT DONE"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtBloodGive"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="@+id/txtBloodGive"
+            app:layout_constraintTop_toBottomOf="@+id/txtBloodGive" />
+
+        <TextView
+            android:id="@+id/txtBloodReceive"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="100"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="77dp"
+            android:layout_height="15dp"
+            android:fontFamily="sans-serif"
+            android:text="HAPPY CLIENT"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txtBloodReceive"
+            app:layout_constraintHorizontal_bias="0.27"
+            app:layout_constraintStart_toStartOf="@+id/txtBloodReceive"
+            app:layout_constraintTop_toBottomOf="@+id/txtBloodReceive" />
+
+        <TextView
+            android:id="@+id/txtThanks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:fontFamily="monospace"
+            android:text="99"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="14dp"
+            android:fontFamily="sans-serif"
+            android:text="COFFEE"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtThanks"
+            app:layout_constraintStart_toStartOf="@+id/txtThanks"
+            app:layout_constraintTop_toBottomOf="@+id/txtThanks" />
+    </android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Experience and Interest"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+
+        />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Home Fragment" />
-        <EditText
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.dinuscxj.progressbar.CircleProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/CircleChatbot"
+                android:layout_gravity="center"
+                app:style="solid_line"
+                app:progress_text_color="@color/colorPrimaryDark"
+                app:progress_stroke_width="3dp"
+                app:progress_start_color="@color/colorPrimary"
+                app:progress_end_color="@color/colorPrimary"
+                app:progress_background_color="@color/colorPrimaryDark"
+                app:progress_start_degree="-90"
+                app:drawBackgroundOutsideProgress="true"
+                app:progress_shader="sweep"
+                app:progress_stroke_cap="round"
+                app:line_width="5dp"
+                app:line_count="30"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Chatbot"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textSize="12dp"
+                android:text="+2 Years Experienced" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/edtHome"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:text="AMBIL"
-            android:id="@+id/btnHome"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.dinuscxj.progressbar.CircleProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/CircleAndroid"
+                android:layout_gravity="center"
+                app:style="solid_line"
+                app:progress_text_color="@color/colorPrimaryDark"
+                app:progress_stroke_width="3dp"
+                app:progress_start_color="@color/colorPrimary"
+                app:progress_end_color="@color/colorPrimary"
+                app:progress_background_color="@color/colorPrimaryDark"
+                app:progress_start_degree="-90"
+                app:drawBackgroundOutsideProgress="true"
+                app:progress_shader="sweep"
+                app:progress_stroke_cap="round"
+                app:line_width="5dp"
+                app:line_count="30"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+
+                android:text="Android Dev"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textSize="12dp"
+
+                android:text="+1 Years Experienced" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="#8E8E8E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/tombol"
-            />
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.dinuscxj.progressbar.CircleProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/CircleAfterEffect"
+                android:layout_gravity="center"
+                app:style="line"
+                app:progress_text_color="@color/colorPrimaryDark"
+                app:progress_stroke_width="3dp"
+                app:progress_start_color="@color/colorPrimary"
+                app:progress_end_color="@color/colorPrimary"
+                app:progress_background_color="@color/colorPrimaryDark"
+                app:progress_start_degree="-90"
+                app:drawBackgroundOutsideProgress="true"
+                app:progress_shader="sweep"
+                app:progress_stroke_cap="round"
+                app:line_width="5dp"
+                app:line_count="30"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="After Effect"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textSize="12dp"
+                android:text="+1 Years Experienced" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.dinuscxj.progressbar.CircleProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/CircleUI"
+                android:layout_gravity="center"
+                app:style="line"
+                app:progress_text_color="@color/colorPrimaryDark"
+                app:progress_stroke_width="3dp"
+                app:progress_start_color="@color/colorPrimary"
+                app:progress_end_color="@color/colorPrimary"
+                app:progress_background_color="@color/colorPrimaryDark"
+                app:progress_start_degree="-90"
+                app:drawBackgroundOutsideProgress="true"
+                app:progress_shader="sweep"
+                app:progress_stroke_cap="round"
+                app:line_width="5dp"
+                app:line_count="30"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+
+                android:text="UI/UX"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textSize="12dp"
+
+                android:text="+3 Years Experienced" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
-</FrameLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

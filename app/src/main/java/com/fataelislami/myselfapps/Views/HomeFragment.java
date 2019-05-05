@@ -11,7 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dinuscxj.progressbar.CircleProgressBar;
 import com.fataelislami.myselfapps.R;
+import com.nineoldandroids.animation.ValueAnimator;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import is.arontibo.library.ElasticDownloadView;
 
 
 /**
@@ -22,9 +28,15 @@ import com.fataelislami.myselfapps.R;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    @BindView(R.id.CircleAndroid) CircleProgressBar CircleAndroid;
+    @BindView(R.id.CircleChatbot) CircleProgressBar CircleChatbot;
+    @BindView(R.id.CircleAfterEffect) CircleProgressBar CircleAfterEffect;
+    @BindView(R.id.CircleUI) CircleProgressBar CircleUI;
+    private static final String DEFAULT_PATTERN = "%d%%";
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -32,8 +44,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    public Button btnHome;
-    EditText edtHome;
     private OnFragmentInteractionListener mListener;
 
     public HomeFragment() {
@@ -72,10 +82,28 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View myView=inflater.inflate(R.layout.fragment_home, container, false);
-        btnHome=myView.findViewById(R.id.btnHome);
-        btnHome.setOnClickListener(this);
-        edtHome=myView.findViewById(R.id.edtHome);
+        ButterKnife.bind(this,myView);
+        simulateProgress(0,91,CircleAndroid);
+        simulateProgress(0,98,CircleChatbot);
+        simulateProgress(0,92,CircleAfterEffect);
+        simulateProgress(0,90,CircleUI);
+
+
         return myView;
+    }
+
+    private void simulateProgress(int min,int max,CircleProgressBar circleProgressBar) {
+        ValueAnimator animator = ValueAnimator.ofInt(min, max);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int progress = (int) animation.getAnimatedValue();
+                circleProgressBar.setProgress(progress);
+            }
+        });
+//        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setDuration(4000);
+        animator.start();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -102,10 +130,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mListener = null;
     }
 
-    @Override
-    public void onClick(View v) {
-        Toast.makeText(getContext(),edtHome.getText().toString(),Toast.LENGTH_LONG).show();
-    }
+
 
     /**
      * This interface must be implemented by activities that contain this

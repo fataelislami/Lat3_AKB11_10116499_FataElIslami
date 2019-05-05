@@ -2,10 +2,13 @@ package com.fataelislami.myselfapps.Models;
 
 public class FriendListModel {
     private String name,age;
+    private int image;
 
-    public FriendListModel(String name,String age){
+
+    public FriendListModel(String name, String age, int image){
         this.name=name;
         this.age=age;
+        this.image = image;
     }
 
     public String getName() {
@@ -22,5 +25,13 @@ public class FriendListModel {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }

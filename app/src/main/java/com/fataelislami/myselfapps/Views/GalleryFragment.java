@@ -97,8 +97,25 @@ public class GalleryFragment extends Fragment {
 
     private void initData() {
         galleryModelList=new ArrayList<>();
-        galleryModelList.add(new GalleryModel(R.drawable.card_1_background,"Ini Contoh 1"));
-        galleryModelList.add(new GalleryModel(R.drawable.card_1_background,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl,"Ini Contoh 1"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl2,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl3,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl4,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl5,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl6,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl7,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl8,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl9,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl10,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl11,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl12,"Ini Contoh 2"));
+        galleryModelList.add(new GalleryModel(R.drawable.gl13,"Ini Contoh 2"));
+
+
+
+
+
+
 
     }
 

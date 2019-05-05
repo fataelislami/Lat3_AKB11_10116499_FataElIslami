@@ -1,14 +1,29 @@
 package com.fataelislami.myselfapps.Views;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fataelislami.myselfapps.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +33,10 @@ import com.fataelislami.myselfapps.R;
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements OnMapReadyCallback {
+    private GoogleMap mMap;
+    @BindView(R.id.imgProfileLinkedin)
+    ImageView imgProfileLinkedin;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -65,7 +83,11 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View viewFragment = inflater.inflate(R.layout.fragment_profile, container, false);
+        SupportMapFragment mMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mMapFragment.getMapAsync(this);
+        ButterKnife.bind(this,viewFragment);
+        return viewFragment;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -90,6 +112,51 @@ public class ProfileFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        double latitude = -6.886579;
+        double longitude = 107.615;
+        mMap = googleMap;
+        LatLng mylocation = new LatLng(latitude, longitude);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mylocation, 17));
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
+
+
+    }
+    @OnClick(R.id.imgProfileLinkedin)
+    public void klik(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://linkedin.com/in/fataelislami/"));
+        startActivity(intent);
+    }
+    @OnClick(R.id.imgProfileInstagram)
+    public void klik2(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://www.instagram.com/fataelislami/"));
+        startActivity(intent);
+    }
+    @OnClick(R.id.imgProfileWhatsapp)
+    public void klik3(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://web.whatsapp.com/send?phone=+628978745871&text=Assalamualaikum"));
+        startActivity(intent);
+    }
+    @OnClick(R.id.txtProfileAbout)
+    public void klik4(){
+        CustomDialog customDialog=new CustomDialog();
+        customDialog.showDialog(getActivity(),"MySelfApps V1.0 was developed by Fata El Islami\n AKB 11-10116499");
     }
 
     /**
