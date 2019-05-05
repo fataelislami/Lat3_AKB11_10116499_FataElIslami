@@ -1,5 +1,10 @@
 package com.fataelislami.myselfapps.Views;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 import android.app.Activity;
 import android.app.Dialog;
 import android.view.View;

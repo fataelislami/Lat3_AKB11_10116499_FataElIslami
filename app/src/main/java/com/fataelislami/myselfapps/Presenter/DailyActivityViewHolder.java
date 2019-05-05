@@ -11,7 +11,12 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 public class DailyActivityViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.txtDailyTitle)
     TextView txtDailyTitle;

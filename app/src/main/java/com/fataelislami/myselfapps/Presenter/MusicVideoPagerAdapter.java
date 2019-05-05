@@ -1,5 +1,10 @@
 package com.fataelislami.myselfapps.Presenter;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;

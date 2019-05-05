@@ -1,5 +1,10 @@
 package com.fataelislami.myselfapps.Models;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 public class MusicModel {
     private int id,image;
     private String title;

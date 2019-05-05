@@ -24,7 +24,12 @@ import com.google.android.gms.maps.model.LatLng;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the

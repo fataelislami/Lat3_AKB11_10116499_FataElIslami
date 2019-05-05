@@ -14,7 +14,12 @@ import com.fataelislami.myselfapps.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.navigation) BottomNavigationView navigation;
     @Override

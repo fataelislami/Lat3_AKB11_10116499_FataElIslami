@@ -11,7 +11,12 @@ import com.fataelislami.myselfapps.Models.DailyActivityModel;
 import com.fataelislami.myselfapps.R;
 
 import java.util.List;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 public class DailyActivityAdapter extends RecyclerView.Adapter<DailyActivityViewHolder> {
     private Context context;
     List<DailyActivityModel> dailyActivityModelList;

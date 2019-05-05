@@ -6,7 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.fataelislami.myselfapps.R;
-
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 public class SplashScreenActivity extends AppCompatActivity {
     private int loadTime=2000;
 

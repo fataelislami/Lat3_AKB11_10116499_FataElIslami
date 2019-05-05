@@ -9,6 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fataelislami.myselfapps.R;
+/**
+ * Nim : 10116499
+ * Nama : Fata El Islami
+ * Kelas : AKB-11
+ * Latiha 3 UTS
+ */
 
 /**
  * A simple {@link Fragment} subclass.
